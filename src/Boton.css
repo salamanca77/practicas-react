@@ -1,0 +1,18 @@
+.botonArticle{
+    width: 200px;
+    background-color: red;
+}
+
+.botonHeader{
+    display: flex;
+    justify-content: space-between;
+}
+.botonImg{
+    width: 2.5rem;
+    height: auto;
+    border-radius: 50%;
+}
+
+.botonDiv> *{
+    display: block;
+}
