@@ -1,6 +1,16 @@
+import { useState } from 'react'
 import './Boton.css'
 
+
 export function Boton({name, email, url}){
+    const [isState, setState] = useState(false)
+    
+    const text = isState? 'No siguiendo': 'Seguir'
+
+    const handleClick = ()=> {
+        setState(!isState)
+    }
+
     return (
         <article className='botonArticle'>
             <header className='botonHeader'>
@@ -10,7 +20,7 @@ export function Boton({name, email, url}){
                     <span>{email}</span>
                 </div>
                 <aside>
-                    <button>boton</button>
+                    <button onClick={handleClick}>{text}</button>
                 </aside>
             </header>
         </article>
