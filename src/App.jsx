@@ -1,13 +1,19 @@
-import {Boton} from './Boton'
+import { ReactDOM } from "react"
+import React from "react"
+import { Lista } from "./assets/Lista"
+
+
+
 
 function App() {
 
   return (
     <>
-      <Boton name="jonn" email="jonn@correo.com" url="https://cdn.pixabay.com/photo/2023/08/26/12/28/tiger-8214815_1280.png"/>      
-      <Boton name="jonn" email="jonn@correo.com" url="https://cdn.pixabay.com/photo/2023/08/26/12/28/tiger-8214815_1280.png"/>      
+    <Lista />
+
     </>
   )
 }
 
 export default App
+  
