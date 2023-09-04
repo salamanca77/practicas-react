@@ -1,23 +1,16 @@
-import { Routes, Route, Link } from "react-router-dom"
+import { Outlet, useParams } from "react-router"
+import { Link } from "react-router-dom"
 
-export function Tienda(){
-    const frutas = [
-        "platano", 
-        "naranja",
-        "uva",
-        "mango"
-    ]
-    
-    return(
+
+export function Tienda() {
+    const {fruta} = useParams()
+
+    return (
         <section>
-            <ul>
-                {
-                    frutas.map((fruta)=>{
-                      return  (<Link key={fruta} to={`/tacos/${fruta}`}><li key={fruta}> enlace</li></Link>
-                    )})
-                }
-            </ul>
-        </section>
-        
-    ) 
+            <h3>Producto</h3>
+            {fruta}
+            <Link to="detalles">Ir a los detalles</Link>
+            <Outlet />
+        </section>  
+    )
 }
