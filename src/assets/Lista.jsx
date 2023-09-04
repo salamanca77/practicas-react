@@ -8,6 +8,7 @@ export function Lista() {
     useEffect(() => {
 
         const pokemones = async () => {
+            
             const response = await fetch('https://pokeapi.co/api/v2/pokemon')
             const datas = await response.json()
             // console.log(datas);
