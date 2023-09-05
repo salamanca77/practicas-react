@@ -12,26 +12,32 @@ import { Hijo } from "./components/Hijo"
 
 export const contexto = React.createContext()
 
+const datos =  {
+    name:"jonn",
+    email:"oliver"
+}
+
+
 export function App() { 
 
-    const [isNombre, setNombre] = useState(null)
+    const [isNombre, setNombre] = useState(datos)
 
     const datoUno = 'd1'
     const datoDos = 'd2'
+    
     const cambiaNombre = ()=>{
 
-        if(isNombre){
-            setNombre(null)
-        }else{
-            setNombre(
-                ['jonn', 'oliver@correo.com']
-            )
-        }
+        setNombre(
+            {
+                name:"juan",
+                email:"perez"
+            }
+        )
     }
 
     return (
 
-       <contexto.Provider value={{isNombre, datoUno, datoDos}}>
+       <contexto.Provider value={{isNombre}}>
 
         <button onClick={cambiaNombre}>Boton</button>
            <Hijo />
