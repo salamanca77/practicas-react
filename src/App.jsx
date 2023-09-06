@@ -7,10 +7,10 @@ import { Buscar } from "./page/Buscar"
 import { Detalles } from "./page/Detalles"
 import { ProtejerRuta } from "./page/ProtejerRuta"
 import { Login } from "./page/Login"
-import React, { useState } from "react"
+import React, { useState, createContext } from "react"
 import { Hijo } from "./components/Hijo" 
 
-export const contexto = React.createContext()
+export const contexto = createContext()
 
 const datos =  {
     name:"jonn",

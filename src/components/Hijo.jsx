@@ -6,9 +6,9 @@ export function Hijo(){
 
     const {isNombre} = useContext(contexto)
     const datos = JSON.stringify(isNombre, null, 2) 
-    // console.log(parse.json(datos));
-
-    
+    console.log(datos);
+    const datoJso = JSON.parse(datos)
+    console.log(datoJso);
     return(
         <div>
             <h1>Hijo</h1>
