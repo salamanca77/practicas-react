@@ -7,41 +7,18 @@ import { Buscar } from "./page/Buscar"
 import { Detalles } from "./page/Detalles"
 import { ProtejerRuta } from "./page/ProtejerRuta"
 import { Login } from "./page/Login"
+
 import React, { useState, createContext } from "react"
-import { Hijo } from "./components/Hijo" 
+import { Contador } from "./components/Contador"
 
-export const contexto = createContext()
-
-const datos =  {
-    name:"jonn",
-    email:"oliver"
-}
-
-
-export function App() { 
-
-    const [isNombre, setNombre] = useState(datos)
-
-    const datoUno = 'd1'
-    const datoDos = 'd2'
+export function App(){
     
-    const cambiaNombre = ()=>{
-
-        setNombre(
-            {
-                name:"juan",
-                email:"perez"
-            }
-        )
-    }
-
+    
     return (
 
-       <contexto.Provider value={{isNombre}}>
-
-        <button onClick={cambiaNombre}>Boton</button>
-           <Hijo />
-       </contexto.Provider> 
+        <div>
+            <Contador />            
+        </div>
 
 
         // <>
