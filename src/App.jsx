@@ -8,17 +8,16 @@ import { Detalles } from "./page/Detalles"
 import { ProtejerRuta } from "./page/ProtejerRuta"
 import { Login } from "./page/Login"
 
-import React, { useState, createContext } from "react"
-import { Contador } from "./components/Contador"
+import React, { useState, createContext, useRef } from "react"
+import { Formulario } from "./components/Fomulario"
 
 export function App(){
     
     
     return (
-
-        <div>
-            <Contador />            
-        </div>
+        <>
+                <Formulario />
+        </>
 
 
         // <>
