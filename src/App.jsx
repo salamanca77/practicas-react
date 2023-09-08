@@ -8,15 +8,16 @@ import { Detalles } from "./page/Detalles"
 import { ProtejerRuta } from "./page/ProtejerRuta"
 import { Login } from "./page/Login"
 
+
 import React, { useState, createContext, useRef } from "react"
-import { Formulario } from "./components/Fomulario"
+import { Destructuracion } from "./components/Destructuracion"
 
 export function App(){
     
     
     return (
         <>
-                <Formulario />
+            <Destructuracion />
         </>
 
 
