@@ -10,14 +10,12 @@ import { Login } from "./page/Login"
 
 
 import React, { useState, createContext, useRef } from "react"
-import { Destructuracion } from "./components/Destructuracion"
 
 export function App(){
     
     
     return (
         <>
-            <Destructuracion />
         </>
 
 
