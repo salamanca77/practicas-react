@@ -10,7 +10,7 @@ export function Table() {
                     </tr>
                 </thead>
                 <body>
-                                    </body>
+                </body>
             </table>
         </div>
     )
