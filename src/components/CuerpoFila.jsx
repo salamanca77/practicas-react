@@ -1,11 +1,12 @@
-export function CuerpoFila({el}) {
+export function CuerpoFila({el, setDataToEdit, deleteData}) {
+    const {nombre, constelacion, id} = el
     return (
         <tr>
-            <td>{el.nombre}</td>
-            <td>{el.constelacion}</td>
+            <td>{nombre}</td>
+            <td>{constelacion}</td>
             <td>
-                <button>Editar</button>
-                <button>Eliminar</button>
+                <button onClick={()=> setDataToEdit(el)}>Editar</button>
+                <button onClick={() => deleteData(el)}>Eliminar</button>
             </td>
         </tr>
 

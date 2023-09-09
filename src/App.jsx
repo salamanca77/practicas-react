@@ -81,18 +81,23 @@ export function App(){
     const [dataToEdit, setDataToEdit] = useState(null)
     
     const createData = (data) =>{
+        console.log(data);
         data.id = Date.now()
         console.log(data)
         setDb([...db, data])
 
     }
-    const updateData = () =>{}
+    const updateData = (data) =>{
+        const nuevoData =  db.map((element)=> element.id === data.id?data:element)
+        setDb(nuevoData)
+    }
+
      const deleteData = () =>{}
 
     return (
         <>
-         <Formulario createData={createData} updateData={updateData} deleteData={deleteData} setDataToEdit={setDataToEdit}/>  
-         <Table datos={db}/>
+         <Formulario createData={createData} updateData={updateData} dataToEdit={dataToEdit} setDataToEdit={setDataToEdit}/>  
+         <Table datos={db} deleteData={deleteData} setDataToEdit={setDataToEdit}/>
         </>
 
 

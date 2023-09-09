@@ -1,6 +1,6 @@
 import { CuerpoFila } from "./CuerpoFila"
 
-export function Table({datos}) {
+export function Table({datos, deleteData, setDataToEdit}) {
     console.log(datos)
     
     return (
@@ -16,7 +16,7 @@ export function Table({datos}) {
                 <tbody>
                     {datos.legth === 0?( 
                      (<tr><td>No hay datos</td></tr>)
-                     ):datos.map(element => <CuerpoFila key={element.id} el={element}/>
+                     ):datos.map(element => <CuerpoFila key={element.id} el={element} setDataToEdit={setDataToEdit} deleteData={deleteData} />
                     )}
                 </tbody>
             </table>
