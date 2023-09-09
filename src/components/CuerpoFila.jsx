@@ -1,8 +1,8 @@
-export function CuerpoFila() {
+export function CuerpoFila({el}) {
     return (
         <tr>
-            <td>jonn</td>
-            <td>Marte</td>
+            <td>{el.nombre}</td>
+            <td>{el.constelacion}</td>
             <td>
                 <button>Editar</button>
                 <button>Eliminar</button>
