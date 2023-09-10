@@ -8,7 +8,6 @@ import { Detalles } from "./page/Detalles"
 import { ProtejerRuta } from "./page/ProtejerRuta"
 import { Login } from "./page/Login"
 import  {Formulario} from "./components/Formulario" 
-import AppPrueba from "./AppPrueba"
 import React, { useState, createContext, useRef, useEffect } from "react"
 import { Table } from "./components/Tabla"
 import { helperHttp } from "./helper/helperHttp.js"
@@ -18,6 +17,9 @@ export function AppPrueba(){
     
     return (
         <>
+
+
+
         </>
 
 
