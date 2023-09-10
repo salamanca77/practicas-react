@@ -15,7 +15,7 @@ export function AppApi(){
       api.get(url).then(res=>{
         if(!res.err){
           setDb(res)
-
+           
         }else{
           setDb(null)
         }

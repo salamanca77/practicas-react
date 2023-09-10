@@ -11,14 +11,28 @@ import  {Formulario} from "./components/Formulario"
 import React, { useState, createContext, useRef, useEffect } from "react"
 import { Table } from "./components/Tabla"
 import { helperHttp } from "./helper/helperHttp.js"
+import { p1 } from "./funciones/p1.js"
 
 export function AppPrueba(){
 
-    
+    useEffect(()=>{
+        
+        p1().declarada()
+        p1().expresada()
+        p1().promesa().then((respuesta)=>{
+            console.log(respuesta);
+
+        })
+        p1().p22().then((res)=>{
+            console.log(res);
+        })
+
+    })
+
     return (
         <>
 
-
+            <h1>saludos</h1>
 
         </>
 

@@ -48,11 +48,16 @@ export const helperHttp = () => {
       options.method = "DELETE";
       return customFetch(url, options);
     };
+
+    const despedida = ()=>{
+      console.log("adios")
+  }
   
     return {
       get,
       post,
       put,
       del,
+      despedida
     };
   };
