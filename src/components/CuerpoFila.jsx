@@ -1,5 +1,7 @@
 export function CuerpoFila({el, setDataToEdit, deleteData}) {
+
     const {nombre, constelacion, id} = el
+
     return (
         <tr>
             <td>{nombre}</td>

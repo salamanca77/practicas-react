@@ -95,17 +95,7 @@ export function AppApi(){
             }
 
         })
-
-        
-        let isDelete = window.confirm(`Seguro de eliminarlo ${id}`)
        
-
-       if(isDelete){
-
-        setDb(newDatos)
-       }else{
-        return
-       }
     }
 
     return (
