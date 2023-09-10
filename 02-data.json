@@ -59,6 +59,16 @@
       "nombre": "Dohko",
       "constelacion": "Libra",
       "id": 12
+    },
+    {
+      "id": 1694344695487,
+      "nombre": "n1",
+      "constelacion": "c1"
+    },
+    {
+      "id": 1694344707084,
+      "nombre": "n2",
+      "constelacion": "c2"
     }
   ],
   "dioses": [
