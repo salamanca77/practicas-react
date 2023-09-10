@@ -35,12 +35,10 @@ export function Formulario({createData,updateData, setDataToEdit, dataToEdit}) {
             return
         }
         
-        console.log('submint',inicioForm);
         if(inicioForm.id === null){
             
-            // console.log(inicioForm);
-
             createData(inicioForm)
+
         }else{
             updateData(inicioForm)
         }

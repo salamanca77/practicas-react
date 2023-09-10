@@ -6,7 +6,7 @@ export function CuerpoFila({el, setDataToEdit, deleteData}) {
             <td>{constelacion}</td>
             <td>
                 <button onClick={()=> setDataToEdit(el)}>Editar</button>
-                <button onClick={() => deleteData(el)}>Eliminar</button>
+                <button onClick={() => deleteData(id)}>Eliminar</button>
             </td>
         </tr>
 

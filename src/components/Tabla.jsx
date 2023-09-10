@@ -1,7 +1,6 @@
 import { CuerpoFila } from "./CuerpoFila"
 
 export function Table({datos, deleteData, setDataToEdit}) {
-    console.log(datos)
     
     return (
         <div>
