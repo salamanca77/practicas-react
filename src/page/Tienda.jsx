@@ -4,9 +4,13 @@ import { Link, useLocation } from "react-router-dom"
 
 export function Tienda() {
     const {nombre, edad} = useParams()
+    
+    console.log(nombre, edad);
+
     let location = useLocation()
     console.log(location);
-    console.log(nombre,edad);
+
+
     return (
         <section>
             <h1>Tienda</h1>

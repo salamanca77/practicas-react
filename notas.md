@@ -6,3 +6,4 @@
 4.- npm create vite@latest  ===>  crea un proyecto de react con vite
 
 5.- https://pokeapi.co/api/v2/pokemon  ===> Api pokemon
+
