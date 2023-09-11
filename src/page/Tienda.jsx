@@ -11,6 +11,12 @@ export function Tienda() {
     console.log(location);
 
 
+    let query = new URLSearchParams(location)
+
+    console.log(query);
+    
+    console.log(nombre,edad);
+    
     return (
         <section>
             <h1>Tienda</h1>
