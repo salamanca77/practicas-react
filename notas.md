@@ -7,3 +7,4 @@
 
 5.- https://pokeapi.co/api/v2/pokemon  ===> Api pokemon
 
+6.- let consulta = new URLSearchParams(search)  ===>serealiza parametros
