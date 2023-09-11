@@ -1,3 +1,5 @@
+import './Contacto.css'
+
 export function Contactos(){
     return(
         <section>

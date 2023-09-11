@@ -1,16 +1,15 @@
 import { Outlet, useParams } from "react-router"
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 
 
 export function Tienda() {
-    const {fruta} = useParams()
-
+    const {nombre, edad} = useParams()
+    let location = useLocation()
+    console.log(location);
+    console.log(nombre,edad);
     return (
         <section>
-            <h3>Producto</h3>
-            {fruta}
-            <Link to="detalles">Ir a los detalles</Link>
-            <Outlet />
+            <h1>Tienda</h1>
         </section>  
     )
 }
