@@ -6,16 +6,10 @@ function useBusqueda(){
 }
 
 export function Busqueda(){
+
   const [busquedaTexto, setBusquedaTexto] = useState("")  
   const navigate = useNavigate()
-  const location = useLocation().search
-  const datos = new URLSearchParams(location)
-  console.log(datos.get('search'));
-  let data = useBusqueda()
-
-  // console.log(location.get("search"));
   
-
   const handleSubmit = (e)=>{
     e.preventDefault()
     navigate('?search=' + busquedaTexto)
