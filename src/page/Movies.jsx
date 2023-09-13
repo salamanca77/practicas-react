@@ -12,15 +12,19 @@ export const Movies = () => {
     const [page, setPage] = useState(1)
     const valorSearch = new URLSearchParams(search)
     const valor = valorSearch.get('search')
-
+    console.log("000", valor);
     const opciones = {
         Authorization: "Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJiYWVlMGY1OTgxYmYzNGE0MDMzNTFmYzQ4MjUzNDVlOSIsInN1YiI6IjY0ODVkYmUzOTkyNTljMDBlMmY1NzJjYSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.2zu26OYNbQpBzwy3Xqpr5dm2qgz7f1hlTZU_BGbs264"
     }
 
+    
     useEffect(() => {
-        let url = valor
-            ? "https://api.themoviedb.org/3//search/movie?query=" + valor + "&page=" + page
-             : "https://api.themoviedb.org/3/movie?page=" + page
+        //   let valor = ""
+
+        console.log("--->   ", valor)
+
+        let url = valor? "https://api.themoviedb.org/3/movie?page=" + page
+             : "https://api.themoviedb.org/3//search/movie?query=" + valor + "&page=" + page
 
         fetch(url, {
             headers: {
@@ -34,30 +38,31 @@ export const Movies = () => {
 
     }, [valor, page])
 
-    if (movies.length === 0) {
-        return <Empty />;
-      }
+    // if (movies.length === 0) {
+    //     return ;
+    //   }
 
     return (
 
         <div>
             <Buscando />
-            <InfiniteScroll
+            {/* <InfiniteScroll
                 dataLength={movies.length}
                 hasMore={true}
                 next={()=> setPage((prevPage)=> prevPage +1 )}
-                >
+                > */}
                     {
-                    movies.map((movie) => {
-                        return (
-                            <div key={movie.id}>
+                        movies.map((movie) => {
+                            return (
+                                <div key={movie.id}>
                                 <img src={`https://image.tmdb.org/t/p/w300/${movie.poster_path}`} alt="" />
                                 <p>{movie.title}</p>
                             </div>
                         )
                     })
                 }
-            </InfiniteScroll>
+            {/* </InfiniteScroll> */}
+            
                     {movies.length === 0 && <p>no hay resultados</p>}
         </div>
     )
